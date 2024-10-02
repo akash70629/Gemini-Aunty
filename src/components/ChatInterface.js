@@ -30,7 +30,7 @@ const ChatInterface = () => {
     }, 3000);
 
     return () => clearInterval(intervalId);
-  }, []);
+  });
 
   // Handle sending a message to the AI
   const handleSend = async () => {
