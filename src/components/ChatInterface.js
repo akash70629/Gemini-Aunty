@@ -25,7 +25,7 @@ const ChatInterface = () => {
     const intervalId = setInterval(() => {
       const currentIndex = placeholderTexts.indexOf(placeholderText);
       const nextIndex = (currentIndex + 1) % placeholderTexts.length;
-      setPlaceholderText(placeholderTexts[nextIndex]);
+      setPlaceholderText(placeholderText,placeholderTexts[nextIndex]);
     }, 3000);
 
     return () => clearInterval(intervalId);
