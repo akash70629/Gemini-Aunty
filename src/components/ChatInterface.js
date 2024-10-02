@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import './ChatInterface.css';
+import aiProfilePicture from './ai-profile-picture.jpeg';
 
 const ChatInterface = () => {
   const [messages, setMessages] = useState([]);
@@ -25,11 +26,11 @@ const ChatInterface = () => {
     const intervalId = setInterval(() => {
       const currentIndex = placeholderTexts.indexOf(placeholderText);
       const nextIndex = (currentIndex + 1) % placeholderTexts.length;
-      setPlaceholderText(placeholderText,placeholderTexts[nextIndex]);
+      setPlaceholderText(placeholderTexts[nextIndex]);
     }, 3000);
 
     return () => clearInterval(intervalId);
-  }, [placeholderTexts]);
+  }, []);
 
   // Handle sending a message to the AI
   const handleSend = async () => {
@@ -66,7 +67,7 @@ const ChatInterface = () => {
 
             <p>Start conversation with Gemini Aunty!</p>
             <p>Type your question or topic to get started.</p>
-            <img src={require('./ai-profile-picture.jpeg')} alt="Gemini Aunty Logo" className="start-conversation-image" />
+            <img src={aiProfilePicture} alt="Gemini Aunty Logo" className="start-conversation-image" />
 
           </div>
         ) : (
