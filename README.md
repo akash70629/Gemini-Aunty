@@ -1,6 +1,11 @@
 # Gemini Aunty 
 It is a basic AI chat app powered by Google Gemini AI.
+<br/>
+<br/>
+<br/>
 # Use it in your project and feel free to create issues and pull requests in this repo😊
+<br/>
+<br/>
 
 Live link -
 # https://gemini-aunty.netlify.app/
